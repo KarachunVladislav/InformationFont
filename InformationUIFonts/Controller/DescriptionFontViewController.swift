@@ -19,10 +19,11 @@ class DescriptionFontViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(index)
-        fontTitleTextLabel.text = fontNames.fontNamesMap[index][0]
-        fontDescriptionTextLabel.text = fontNames.fontNamesMap[index][1]
-        fontExampleTextLabel.font = UIFont(name: fontNames.fontNamesMap[index][1], size: 15)
+
+        guard let fontFullName = fontNames.fontNamesMap[index][FontKeysDictionary.fontFullName] else { return }
+        fontTitleTextLabel.text = fontNames.fontNamesMap[index][FontKeysDictionary.fontFamilyName]
+        fontDescriptionTextLabel.text = fontFullName
+        fontExampleTextLabel.font = UIFont(name: fontFullName, size: 15)
         fontExampleTextLabel.textColor = FlatGreen()
         // Do any additional setup after loading the view.
     }

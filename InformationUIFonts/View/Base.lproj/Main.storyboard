@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,30 +37,36 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Gmr-0J-FxO">
-                                                    <rect key="frame" x="-15" y="10" width="130" height="80"/>
+                                                    <rect key="frame" x="62" y="43" width="130" height="80"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="UPg-zm-JCS">
-                                                            <rect key="frame" x="0.0" y="0.0" width="100" height="50"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="84" height="42"/>
                                                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="6Z2-hN-CrT">
-                                                            <rect key="frame" x="0.0" y="50" width="100" height="50"/>
+                                                            <rect key="frame" x="0.0" y="42" width="84" height="42"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="6Z2-hN-CrT" secondAttribute="trailing" constant="5" id="7Nx-ft-CQi"/>
+                                                        <constraint firstItem="UPg-zm-JCS" firstAttribute="leading" secondItem="Gmr-0J-FxO" secondAttribute="leading" constant="5" id="bV5-Q4-Vd7"/>
+                                                        <constraint firstAttribute="trailing" secondItem="UPg-zm-JCS" secondAttribute="trailing" constant="5" id="dp2-4g-wtt"/>
+                                                        <constraint firstItem="6Z2-hN-CrT" firstAttribute="leading" secondItem="Gmr-0J-FxO" secondAttribute="leading" constant="5" id="eLk-A1-x4Q"/>
+                                                    </constraints>
                                                 </stackView>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="Gmr-0J-FxO" secondAttribute="bottom" id="5V3-He-aAg"/>
-                                            <constraint firstItem="Gmr-0J-FxO" firstAttribute="top" secondItem="PgF-QK-9UU" secondAttribute="top" id="Y9h-6W-HrT"/>
-                                            <constraint firstAttribute="trailing" secondItem="Gmr-0J-FxO" secondAttribute="trailing" id="bRB-ry-GiW"/>
-                                            <constraint firstItem="Gmr-0J-FxO" firstAttribute="leading" secondItem="PgF-QK-9UU" secondAttribute="leading" id="uka-Ai-b3k"/>
+                                            <constraint firstItem="Gmr-0J-FxO" firstAttribute="leading" secondItem="PgF-QK-9UU" secondAttribute="leadingMargin" id="GGY-GT-kDu"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="Gmr-0J-FxO" secondAttribute="trailing" id="ITR-GC-wtP"/>
+                                            <constraint firstItem="Gmr-0J-FxO" firstAttribute="top" secondItem="PgF-QK-9UU" secondAttribute="topMargin" id="LjG-Z2-UEg"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="Gmr-0J-FxO" secondAttribute="bottom" id="X3F-6m-AcG"/>
                                         </constraints>
                                         <size key="customSize" width="100" height="100"/>
                                         <connections>
@@ -97,8 +104,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCx-TP-f5n">
-                                <rect key="frame" x="50" y="120" width="61" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BCx-TP-f5n">
+                                <rect key="frame" x="50" y="120" width="315" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -123,6 +130,7 @@
                             <constraint firstItem="t10-fa-3a0" firstAttribute="leading" secondItem="rdC-us-uOe" secondAttribute="leading" constant="50" id="X2D-AL-wkY"/>
                             <constraint firstItem="BCx-TP-f5n" firstAttribute="leading" secondItem="rdC-us-uOe" secondAttribute="leading" constant="50" id="ayb-yI-ARo"/>
                             <constraint firstItem="t10-fa-3a0" firstAttribute="top" secondItem="BCx-TP-f5n" secondAttribute="bottom" constant="20" id="mjo-8S-UaR"/>
+                            <constraint firstItem="rdC-us-uOe" firstAttribute="trailing" secondItem="BCx-TP-f5n" secondAttribute="trailing" constant="10" id="nnh-Oh-dlL"/>
                             <constraint firstItem="rdC-us-uOe" firstAttribute="trailing" secondItem="t10-fa-3a0" secondAttribute="trailing" constant="10" id="obd-DT-Cqf"/>
                             <constraint firstItem="dkG-sC-gER" firstAttribute="top" secondItem="t10-fa-3a0" secondAttribute="bottom" constant="15" id="tW0-r6-Ss6"/>
                         </constraints>

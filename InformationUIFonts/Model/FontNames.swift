@@ -11,11 +11,11 @@ import UIKit
 class FontNames {
     lazy var fontNamesMap = mapFontNames()
     
-    func mapFontNames() -> [[String]]{
+    func mapFontNames() -> [[String : String]] {
         let fontNamesMap = UIFont.familyNames.sorted().map { (familyName) in
-            UIFont.fontNames(forFamilyName: familyName).map({ (fontName) in
-                return [familyName, fontName]
-            })
+            UIFont.fontNames(forFamilyName: familyName).map { (fontFullName) in
+                return [FontKeysDictionary.fontFamilyName: familyName, FontKeysDictionary.fontFullName: fontFullName]
+            }
         }
         let joined = Array(fontNamesMap.joined())
         return joined

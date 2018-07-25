@@ -71,21 +71,21 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             }
         }
         
-        cell.fontTitleLabel.font = UIFont(name: fontNames.fontNamesMap[indexPath.row][1], size: 20)
-        cell.fontDescriptionLabel.font = UIFont(name: fontNames.fontNamesMap[indexPath.row][1], size: 15)
-        
-        cell.fontTitleLabel.text = fontNames.fontNamesMap[indexPath.row][0]
-        cell.fontDescriptionLabel.text = fontNames.fontNamesMap[indexPath.row][1]
+        guard let fontFullName = fontNames.fontNamesMap[indexPath.row][FontKeysDictionary.fontFullName] else { return cell }
+        cell.fontTitleLabel.font = UIFont(name: fontFullName, size: 20)
+        cell.fontDescriptionLabel.font = UIFont(name: fontFullName, size: 15)
+        cell.fontTitleLabel.text = fontNames.fontNamesMap[indexPath.row][FontKeysDictionary.fontFamilyName]
+        cell.fontDescriptionLabel.text = fontFullName
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
         let destination = UIStoryboard(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "DescriptionFontVC") as! DescriptionFontViewController
         self.navigationController?.pushViewController(destination, animated: true)
-        //collectionView.deselectItem(at: indexPath, animated: true)
-        destination.index = indexPath.row
         
+        destination.index = indexPath.row
     }
 }
 

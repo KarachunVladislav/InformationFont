@@ -16,6 +16,7 @@
 		860B8B432106253A00CFAC15 /* UICollectionViewCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 860B8B412106253A00CFAC15 /* UICollectionViewCustomCell.swift */; };
 		864B59DC21068AD500412731 /* FontNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864B59DB21068AD500412731 /* FontNames.swift */; };
 		86FBE97021077F860013CA63 /* DescriptionFontViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FBE96F21077F860013CA63 /* DescriptionFontViewController.swift */; };
+		86FBE9802108EEA30013CA63 /* KeysFontDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86FBE97F2108EEA30013CA63 /* KeysFontDictionary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		860B8B412106253A00CFAC15 /* UICollectionViewCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewCustomCell.swift; sourceTree = "<group>"; };
 		864B59DB21068AD500412731 /* FontNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontNames.swift; sourceTree = "<group>"; };
 		86FBE96F21077F860013CA63 /* DescriptionFontViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionFontViewController.swift; sourceTree = "<group>"; };
+		86FBE97F2108EEA30013CA63 /* KeysFontDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeysFontDictionary.swift; sourceTree = "<group>"; };
 		8E095264633330638C8C976F /* Pods_InformationUIFonts.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InformationUIFonts.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				864B59DB21068AD500412731 /* FontNames.swift */,
+				86FBE97F2108EEA30013CA63 /* KeysFontDictionary.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			files = (
 				860B8B322106219400CFAC15 /* ViewController.swift in Sources */,
 				864B59DC21068AD500412731 /* FontNames.swift in Sources */,
+				86FBE9802108EEA30013CA63 /* KeysFontDictionary.swift in Sources */,
 				86FBE97021077F860013CA63 /* DescriptionFontViewController.swift in Sources */,
 				860B8B432106253A00CFAC15 /* UICollectionViewCustomCell.swift in Sources */,
 				860B8B302106219400CFAC15 /* AppDelegate.swift in Sources */,
